@@ -1,0 +1,7 @@
+{
+  "name": "latihanDua",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
