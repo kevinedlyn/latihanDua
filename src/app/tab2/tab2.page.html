@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      About Us dan Game Tebak Angka
     </ion-title>
   </ion-toolbar>
 </ion-header>
@@ -9,9 +9,36 @@
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
+      <ion-title size="medium">About Us</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <center>
+    <h5>Nama : Kevin Edlyn Chandra</h5>
+    <h5>NRP : C14180208</h5>
+    <h5>Nomor Handphone : 081331648416</h5>
+    <div *ngIf="randisTrue">
+      <img src="assets/image/myimage.jpg"/>
+    </div>
+
+  <h2>Tebak Angka</h2>
+  <p>Jika berhasil menebak angka, maka profile picture akan muncul</p>
+  <ion-input type="text" [(ngModel)]="userNum" placeholder="Isi tebakan angka random disini" ></ion-input>
+  <ion-button (click)="cekRandom()">Cek Random</ion-button>
+  <ion-button (click)="showRandom()">Show Random</ion-button>
+  <ion-button (click)="unshowRandom()">Unshow Random</ion-button>
+  
+  
+  <div *ngIf="showRandomisTrue">
+    <h5>Random Number : {{randomAngka}}</h5>
+  </div>
+
+  <div *ngIf="!randisTrue">
+    <h5>Tebakan Anda Salah!</h5>
+  </div>
+
+  <div *ngIf="randisTrue">
+    <h5>Tebakan Anda Benar!</h5>
+  </div>
+</center>
 </ion-content>
